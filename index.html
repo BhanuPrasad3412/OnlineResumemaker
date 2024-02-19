@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Resume Builder</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">    
+</head>
+<body>
+    <!-- here gose html code -->
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Builder</h1>
+        <p class="text-center">By LearnCodeWith @Front_end_developers_2023</p>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <!-- First col -->
+                <h3 class="text">Personal Information</h3>
+                <!-- first name field -->
+                <div class="form-group">
+                    <label for="nameField">Enter Name</label>
+                    <input type="text" id="nameField" placeholder="Enter Here" class="form-control">
+                </div>
+                <!-- contact Field -->
+                <div class="form-group mt-2">
+                    <label for="contactField">Enter Contact</label>
+                    <input type="text" id="contactField" placeholder="Enter Here" class="form-control">
+                </div>
+                <!-- contact Field -->
+                <div class="form-group mt-2">
+                    <label for="emailField">Enter Email ID</label>
+                    <input type="text" id="emailField" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <!-- Address field -->
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea id="addressField" placeholder="Enter Here" class="form-control" rows="5"></textarea>
+                </div>
+
+                <!-- Online links -->
+                <p class="text-secondary mt-3 ">Important Links</p>
+
+                <!-- Facebook -->
+                <div class="form-group mt-2">
+                    <label for="fbField">FaceBook</label>
+                    <input type="text" id="fbField" placeholder="Enter Here" class="form-control">
+                </div>
+                <!-- Instagram -->
+                <div class="form-group mt-2">
+                    <label for="linkedField">LinkedIn</label>
+                    <input type="text" id="linkedField" placeholder="Enter Here" class="form-control">
+                </div>
+                <!-- GitHub -->
+                <div class="form-group mt-2">
+                    <label for="githubField">GitHub</label>
+                    <input type="text" id="githubField" placeholder="Enter Here" class="form-control">
+                </div>
+            </div>
+            <!-- First col Finished -->
+
+
+
+            <div class="col-md-6">
+                <!-- Second col -->
+                <h3 class="text">Profectional Information</h3>
+                <!-- Objective field -->
+                <div class="form-group mt-2">
+                    <label for="objectField">Objective</label>
+                    <textarea id="objectField" placeholder="Enter Here" class="form-control" rows="5"></textarea>
+                </div>
+                <!-- Work Experience -->
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea  placeholder="Enter Here" class="form-control weField" rows="3"></textarea>
+
+                    <!-- new text area -->
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <!-- Academic Qualification -->
+                 <div class="form-group mt-2" id="aq">
+                    <label for="">Academic Qualification</label>
+                    <textarea placeholder="Enter Here" class="form-control eqField" rows="3"></textarea>
+                    <!-- new text area -->
+                    <div class="container text-center mt-2" id="academicAddButton">
+                        <button onclick="addNewAqButton()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+            <!-- second col Finished -->
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+
+    </div>
+     <!-- here gose html code Finished -->
+
+    <!-- CV template -->
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5" id="background">
+                <!-- First col -->
+                <img src="https://campussafetyconference.com/wp-content/uploads/2020/08/iStock-476085198.jpg"
+                 alt="" class="img-fluid myimg">
+
+                <div class="container">
+                    <p id="nameT1">Your Name</p>
+                    <p id="contactT">+91 9898989898, +91 9898989898</p>
+                    <p id="emailT">Bhanuprasad.1234@gmail.com</p>
+                    <p id="addressT">500012/ sector 9 KGF,INDIA</p>
+                    <hr>
+                    <p>
+                        <a id="fbT" href="#1">https://www.facebook.com</a>
+                    </p>
+                    <p>
+                        <a id="linkT" href="#2">https://www.LinkedIn.com</a>
+                    </p>
+                    <p>
+                        <a id="gitT" href="#3">https://www.GitHub.com</a>
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-md-8 py-5">
+                <!-- second col -->
+                <h1 id="nameT2" class="text-center" style="font-weight: 980;">Your Name</h1>
+
+                <!-- Objective Card -->
+                <div class="card mt-3">
+                    <div class="card-header" id="background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus suscipit 
+                            fugiat veniam iusto laudantium, magni incidunt officiis sequi quos delectus amet nesciunt
+                            dolores reiciendis sint iure, culpa cum porro dolore quidem illum ipsa! Molestias quia
+                            veniam maiores repudiandae fugiat dolorum consectetur expedita harum? Voluptatem quasi
+                            reprehenderit molestiae architecto facere!  </p>
+                    </div>
+                </div>
+                <!-- work experience-->
+                <div class="card mt-3">
+                    <div class="card-header" id="background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="weT">
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, illum.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, ipsam?</li>
+                        <li>Reiciendis quasi nobis deserunt illum, sequi laboriosam officiis porro consectetur?</li>
+                        <li>Aliquam sapiente natus tenetur esse minima voluptatibus eius consequatur. Ipsa!</li>
+                       </ul>
+                    </div>
+                </div>
+                <!-- Academic Qualification -->
+                <div class="card mt-3">
+                    <div class="card-header" id="background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="aqT">
+                        <li>S.S.C PASSED YEAR 2014 With 5.5 CGPA</li>
+                        <li>Intermediate Passed Year 2017 With 6.9 CGPA </li>
+                        <li>Graduaction Passed Year 2020 With 8.15 CGPA </li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn" id="background">Print CV</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- CV template Finished -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
